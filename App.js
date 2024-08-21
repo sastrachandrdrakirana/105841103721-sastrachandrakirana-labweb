@@ -1,59 +1,43 @@
-import { StyleSheet, text, View,Button,Text, TextInput } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { useFonts } from 'expo-font';
 
-const ButtonCostum  = ({ text, color }) => {
-  return (
+const App = () => {
+  const [fontloaded] = useFonts({
+    MetropolisBlack : require('./assets/fonts/Metropolis-Black.otf'),
+    Metropolisbold : require('./assets/fonts/Metropolis-Bold.otf'),
+    MetropolisLight : require('./assets/fonts/Metropolis-Light.otf'),
+    MetropolisSemibold : require('./assets/fonts/Metropolis-SemiBold.otf'),
+  });
+
+  if (!fontloaded){
+  return <Text>font tidak ditemukan </Text>
+
+  }
+  return(
     <View style={{
-      backgroundColor: color,
-      width: 250,
-      height: 100,
-      borderRadius: 10 ,
+      flex: 1,
       justifyContent: 'center',
-      marginBottom: 10,
+      alignItems: 'center',
     }}>
       <Text style={{
-        textAlign: 'center',
-        color: 'white',
-        fontSize: 30,
-        fontWeight: 'bold',
-      }}>
-        {text}
-      </Text>
+      fontFamily: "MetropolisBlack", 
+      fontSize:30,
+      }}>Metropolisblak</Text>
+      <Text style={{
+      fontFamily: "Metropolisbold", 
+      fontSize:30,
+      }}>MetropolisBold</Text>
+      <Text style={{
+      fontFamily: "MetropolisLight", 
+      fontSize:30,
+      }}>Metropolislight</Text>
+      <Text style={{
+      fontFamily: "MetropolisSemiBold", 
+      fontSize:30,
+      }}>MetropolisSemibold</Text>
     </View>
-  )
-}
-
-const TextInputCustom =({placeholder,typekeyboard}) => {
-  return(
-      
-        <TextInput
-        placeholder={placeholder}
-        keyboardType={typekeyboard}
-
-        style={{
-          width: 250,
-          height:50,
-          borderColor:'gray',
-          borderWidth: 1,
-          borderRadius:10,
-          marginBottom:10,
-          paddingLeft: 10,
-        }}/>
-  )
-}
-const App = () => {
-  return(
-    <View style={{
-      flex:1,
-      justifyContent: 'center',
-      alignItems:'center',
-    }}>
-      <View>
-        <TextInputCustom placeholder="masukkan nama" color="green"/>
-        <TextInputCustom placeholder="masukkan nomor" typekeyboard="numeric" color="green"/>
-      </View>
-      
-    </View>
+    
   )
 }
 
