@@ -6,39 +6,68 @@ export default function App() {
     <View
       style={{
         flex: 1,
+        // alignItems: kolom,
+        // justifyContent: baris,
+        flexDirection: "row",
       }}
     >
       <View
         style={{
           flex: 1,
-          flexDirection: "row",
+          alignItems: "flex-end",
+          justifyContent: "center",
         }}
       >
         <View
           style={{
-            flex: 1,
+            width: 130,
+            height: 80,
             backgroundColor: "red",
+            borderRadius: 10,
+            marginRight: 10,
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        ></View>
+        >
+          <Text
+            style={{
+              color: "white",
+              fontSize: 20,
+            }}
+          >
+            Sign In
+          </Text>
+        </View>
+      </View>
+
+      <View
+        style={{
+          flex: 1,
+          alignItems: "flex-start",
+          justifyContent: "center",
+        }}
+      >
         <View
           style={{
-            flex: 1,
+            width: 130,
+            height: 80,
             backgroundColor: "blue",
+            borderRadius: 10,
+            marginLeft: 10,
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        ></View>
+        >
+          <Text
+            style={{
+              color: "white",
+              fontSize: 20,
+            }}
+          >
+            Sign Up
+          </Text>
+        </View>
       </View>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "green",
-        }}
-      ></View>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "orange",
-        }}
-      ></View>
     </View>
   );
 }
