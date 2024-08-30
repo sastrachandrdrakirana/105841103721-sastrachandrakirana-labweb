@@ -19,7 +19,7 @@ export default function Visual2() {
                         height: '100%',
                         resizeMode: 'cover',
                     }}
-                    source={require('../assets/merah.jpg')}
+                    source={require('../assets/pp2.png')}
                 />
 
                 {/* Overlay yang menggelapkan area di luar kotak */}
@@ -56,7 +56,7 @@ export default function Visual2() {
                                 height: '100%',
                                 resizeMode: 'cover',
                             }}
-                            source={require('../assets/merah.jpg')}
+                            source={require('../assets/pp2.png')}
                         />
                     </View>
                 </View>

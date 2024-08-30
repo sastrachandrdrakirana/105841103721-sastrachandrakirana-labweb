@@ -4,12 +4,12 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollVi
 
 class Home extends Component {
     render() {
-        const mainImage = require('../assets/orang putih.jpeg');
+        const mainImage = require('../assets/merah.jpg');
         const newImages = [
-            { source: require('../assets/orang hitam.png'), title: 'dress abu-abu', subtitle: '10$' },
+            { source: require('../assets/oranghitam.png'), title: 'dress abu-abu', subtitle: '10$' },
             { source: require('../assets/dress.png'), title: 'Dress pink', subtitle: '12$' },
-            { source: require('../assets/orang putih 2.png'), title: 'dress putih', subtitle: '15$' },
-            { source: require('../assets/orang hitam 2.png'), title: 'dress hitam', subtitle: '15$' },
+            { source: require('../assets/orangputih2.png'), title: 'dress putih', subtitle: '15$' },
+            { source: require('../assets/oranghitam2.png'), title: 'dress hitam', subtitle: '15$' },
             
         ];
 
